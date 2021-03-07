@@ -1,12 +1,12 @@
 import React from "react";
-import useUsers from "domain/users/useUsers";
+import usePlayers from "domain/users/usePlayers";
 const AppContext = React.createContext();
 
 const AppContextProvider = ({ children }) => {
-  const users = useUsers();
+  const players = usePlayers();
 
   const defaultContext = {
-    users,
+    players,
   };
 
   return (

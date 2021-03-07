@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import routes from "./routes";
 import HomePage from "pages/index";
 import AppLayout from "components/common/AppLayout";
+import "antd/dist/antd.css";
 
 const AppRoutes = () => (
   <AppLayout>
@@ -17,7 +18,10 @@ function App() {
     <AppContextProvider>
       <BrowserRouter>
         <Switch>
-          <Route path={[routes.home.pattern]} component={AppRoutes} />
+          <Route
+            path={[routes.home.pattern, routes.elimination.pattern]}
+            component={AppRoutes}
+          />
         </Switch>
       </BrowserRouter>
     </AppContextProvider>
