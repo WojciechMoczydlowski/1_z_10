@@ -5,9 +5,7 @@ import { spacing, colors } from "styles/variables";
 const AppLayout = ({ name, children }) => {
   return (
     <Container>
-      <Header 
-        name = "Finał"
-      />
+      <Header name="Finał" />
       <Content>{children}</Content>
     </Container>
   );
@@ -16,10 +14,13 @@ const AppLayout = ({ name, children }) => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  height: 100vh;
+
   background-color: ${colors.lightblue};
-  height: 2000px;
-  `;
-  
+  overflow: hidden;
+`;
+
 const Content = styled.div`
   display: flex;
   flex-direction: column;
