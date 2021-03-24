@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import Header from "./Header";
 import { spacing, colors } from "styles/variables";
+import background from "./background.jpg";
 
 const AppLayout = ({ name, children }) => {
   return (
-    <Container>
+    <Container background={background}>
+      <Image src={background} />
       <Header name="Finał" />
       <Content>{children}</Content>
     </Container>
@@ -12,13 +14,24 @@ const AppLayout = ({ name, children }) => {
 };
 
 const Container = styled.div`
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
   height: 100vh;
+`;
 
-  background-color: ${colors.lightblue};
-  overflow: hidden;
+const Image = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+
+  height: 100vh;
+  width: 100vw;
+
+  opacity: 0.4;
 `;
 
 const Content = styled.div`

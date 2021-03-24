@@ -4,6 +4,7 @@ import PlayerPanel from "pages/final/player_panel";
 import Question from "./question";
 import useCurrentPlayer from "./useCurrentPlayer";
 import usePlayers from "./usePlayers";
+import { colors } from "styles/variables";
 
 const Final = (props) => {
   const { currentPlayer, isOpponent, selectPlayer } = useCurrentPlayer();
@@ -56,11 +57,13 @@ const Final = (props) => {
 
 const Root = styled.div`
   display: grid;
-  grid-template-rows: 300px auto;
+  grid-template-rows: 350px auto;
 `;
 
 const Content = styled.div`
   grid-row-start: 1;
+
+  background-color: ${colors.white};
 `;
 
 const Content2 = styled.div`
