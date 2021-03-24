@@ -5,6 +5,9 @@ const routes = {
   elimination: {
     pattern: "/elimination",
   },
+  final: {
+    pattern: "/final",
+  },
 };
 
 export default routes;

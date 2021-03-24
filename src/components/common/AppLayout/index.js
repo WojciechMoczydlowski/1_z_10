@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import Header from "./Header";
-import { spacing } from "styles/variables";
+import { spacing, colors } from "styles/variables";
 
-const AppLayout = ({ children }) => {
+const AppLayout = ({ name, children }) => {
   return (
     <Container>
-      <Header />
+      <Header 
+        name = "Finał"
+      />
       <Content>{children}</Content>
     </Container>
   );
@@ -14,12 +16,13 @@ const AppLayout = ({ children }) => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
+  background-color: ${colors.lightblue};
+  height: 2000px;
+  `;
+  
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-
   width: 100%;
   height: 100%;
   margin-top: ${spacing.medium};

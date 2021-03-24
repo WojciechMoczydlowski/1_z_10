@@ -4,7 +4,12 @@ export const fontSize = {
   body: "0.875rem",
 };
 
-export const colors = {};
+export const colors = {
+  lightblue: "#EBF9FC",
+  blue: "#4F8CE9",
+  white: "white",
+  yellow: "#FEF758",
+};
 
 export const spacing = {
   xsmall: "0.25rem", // 4
