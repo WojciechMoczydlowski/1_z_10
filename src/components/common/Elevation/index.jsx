@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Elevation = ({className, children}) => {
+const Elevation = ({ onClick, className,children}) => {
   return (
-    <Root className={className}>
+    <Root className={className} onClick={onClick}>
       {children}
     </Root>
   );

@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "antd";
 
-const Question = (props) => {
+const Question = ({ content, answerQuestion }) => {
   return (
     <Root>
-      <Content1>{props.content}</Content1>
+      <Content1>{content}</Content1>
       <Content2>
         <Button
+          onClick={() => answerQuestion(true)}
           type="primary"
           style={{
             backgroundColor: "#60C720",
@@ -20,6 +21,7 @@ const Question = (props) => {
           Dobrze
         </Button>
         <Button
+          onClick={() => answerQuestion(false)}
           type="primary"
           style={{
             backgroundColor: "#EA3A3A",

@@ -21,7 +21,11 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route
-            path={[routes.home.pattern, routes.elimination.pattern]}
+            path={[
+              routes.home.pattern,
+              routes.elimination.pattern,
+              routes.final.pattern,
+            ]}
             component={AppRoutes}
           />
         </Switch>
